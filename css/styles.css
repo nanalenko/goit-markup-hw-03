@@ -24,6 +24,14 @@
 
 
 }
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 15px; 
+
+}
+
 body { color: var(--title-text-color);
     background-color:var(--accent-white-color);
     font-family: var(--font-family-text);
@@ -33,23 +41,31 @@ body { color: var(--title-text-color);
     line-height: 1.14;
 
 }
-/* button */
-.button {
-    color: var(--accent-white-color);
-    background: var(--accent-color);
-    cursor: pointer;
-    font-family: var(--font-family-text);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
 
+.list, .title, .text{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
+/* Header */
+.header{
+    border-bottom: 1px solid var(--line-color);
+}
+
+
 /* Логотип */
+
+
 .logo{
     color:var(--accent-color) ;
     text-decoration: none;
@@ -59,8 +75,19 @@ body { color: var(--title-text-color);
     line-height: 1.19;
     letter-spacing: 0.03em;
 }
+
+.top{
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+
+}
+
 .logo-header{ color:var(--logo-text) ;}
 .logo-footer{color:var(--accent-white-color) ; }
+
+/* скрыть текст */
+
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -75,10 +102,28 @@ body { color: var(--title-text-color);
   }
 
 /* Навигация*/
-.list{
-    list-style: none;
+.navigation{
+    align-items: center;
 }
+
+.flex{
+    display: flex;
+}
+.site-nav{
+    display: flex;
+   
+
+}
+
+.site-nav .item:not(:last-child){
+    margin-right: 50px;
+
+}
+
 .site-nav .link{
+    display: block;
+    padding: 32px 0;
+
     color:var(--primary-text-color);
     text-decoration: none;
     font-weight: 500;
@@ -93,7 +138,21 @@ body { color: var(--title-text-color);
 
 }
 /* Контакты*/
+
+.auth-nav{
+    display: flex;
+    margin-left: auto;
+    
+}
+
+.auth-nav .item:not(:last-child){
+    margin-right: 50px;
+}
+
 .auth-nav .header-contacts{
+    display: block;
+    padding: 32px 0;
+
     color: var(--title-text-color);
     text-decoration: none;
     font-weight: 500;
@@ -105,15 +164,43 @@ color: var(--accent-color);
 }
 
 /*Герой*/
-.hero{ background-color: var(--primary-bgr-color);}
+
+.hero{ background-color: var(--primary-bgr-color);
+    text-align: center;
+    padding: 200px 0;
+    
+}
 .hero-title{ color: var(--accent-white-color);
+    margin:0 auto 30px;
+    width: 696px;
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
+/* button */
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 10px 32px;
+    border: none;
+    min-width: 200px;
+
+    color: var(--accent-white-color);
+    background: var(--accent-color);
+    cursor: pointer;
+    font-family: var(--font-family-text);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    align-items: center;
+    letter-spacing: 0.06em;
+
+}
+
 .hero .button:hover,
 .hero .button:focus{ background-color: var(--color-button-hover);}
 
@@ -123,21 +210,43 @@ color: var(--accent-color);
 .section-title{
     color: var(--primary-text-color);
 }
-.feature-list .title{
+.feature-list .feature-title{
     color: var(--primary-text-color);
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
 }
+
+.feature-title{
+    margin-bottom: 10px;
+}
+.feature-list .item:not(:last-child){
+    margin-right: 30px;
+}
+
 .feature-list .text{
     color: var(--title-text-color);
     line-height: 1.71;
+
+    width: 270px;
 }
 /* Чем мы занимаемся*/
+
+.work{
+    
+}
+
 .work-list{
     list-style: none;
 }
-.work-title, .team-title { color: var(--primary-text-color);
+.work-list .item:not(:last-child){
+    margin-right: 30px;
+}
+
+.work-title, .team-title { 
+    margin-bottom: 50px;
+    
+    color: var(--primary-text-color);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -149,7 +258,29 @@ color: var(--accent-color);
 .name-list{ list-style: none;}
 
 .team { background-color: var(--secondary-bgr-color);}
+.team-title{
+    margin-bottom: 50px;
+}
 
+.name-title{ 
+    margin-bottom: 10px;
+}
+
+.team-container{
+    padding: 30px 0;
+    text-align: center;
+}
+
+.name-list .item{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.name-list .item:not(:last-child){
+    margin-right: 30px;
+}
 
 .name-list .name-title{ color: var(--primary-text-color);
     font-weight: 500;
@@ -163,10 +294,20 @@ color: var(--accent-color);
 }
 
     /* Футер */
+
 .footer{
+    padding: 60px 0;
+
     background-color: var(--primary-bgr-color);
     text-decoration: none;
 }
+.address-list{
+    margin-top: 20px;
+}
+.address-list .item:not(:last-child){
+    margin-bottom: 9px;
+}
+
 .address-list{ text-decoration: none;
     font-style: normal;
     list-style: none;
@@ -189,8 +330,25 @@ color: var(--accent-color);
 /* Portfolio */
 
 .portfolio-section {
-    list-style:none ;}
+    list-style:none ;
+    margin-bottom: 34px;
+    justify-content: center;  
+}
+
+
+.portfolio-section .item{
+    outline: 1px solid blueviolet;
+}
+.portfolio-section .item:not(:last-child){
+    margin-right: 8px;
+
+}
+
 .portfolio-section .button{ color: var(--primary-text-color);
+    padding: 6px 22px;
+    border-width: 0;
+    border-radius: 4px;
+
     background-color: var(--secondary-bgr-color);
     font-weight: 500;
     font-size: 16px;
@@ -205,7 +363,14 @@ cursor: pointer;}
 .portfolio-section .button.current {  color: var(--accent-white-color);
     background-color: var(--accent-color);}
 
-.projects-title { list-style: none;}
+.projects-title .title {
+     list-style: none;
+}
+
+.projects-title .project-list{
+    
+}
+
 .project-list .project-link {text-decoration: none;
 }
 
@@ -219,4 +384,13 @@ cursor: pointer;}
 .project-list .text { color: var(--title-text-color);
     font-size: 16px;
     line-height: 1.88;
+}
+
+.project-card{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.project-card .title{
+ margin-bottom: 4px;
 }
