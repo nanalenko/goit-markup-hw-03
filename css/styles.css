@@ -334,13 +334,8 @@ color: var(--accent-color);
 /* Portfolio */
 
 .portfolio-section {
-    margin-bottom: 34px;
+    margin-bottom: 50px;
     justify-content: center;
-}
-
-
-.portfolio-section .item{
-    padding-bottom: 16px;
 }
 
 .portfolio-section .item:not(:last-child){
@@ -352,6 +347,7 @@ color: var(--accent-color);
     border-radius: 4px;
     padding: 6px 22px;
     border: none;
+    
 
     background-color: var(--secondary-bgr-color);
     font-weight: 500;
